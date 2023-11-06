@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Persentage Calculator</title>
+<style>
+      *{
+	  margin:0;
+	  padding:0;
+	  box-sizing:border-box;
+	  }
+	  body{
+	  font-size:14px;
+	  text-align:center;
+	  font-family:vardana;
+	  background-color:rgb(145,183,100);
+	  
+	  } .card{ 
+	  	height:80vh; 
+	  	width:440px; 
+	  	margin:auto; 
+	  	background-color: #060c21;
+        border:3px solid black; 
+       border-radius:5px;
+
+	  }
+	  input{
+	  color:white;
+	  border:2px solid black;
+	  background-color:#272727;
+	  font-size:15px;
+	  height: 35px;
+	  text-align:center;
+	  width:60%;
+	  outline:none;
+	   border-radius:10px;
+	  }
+	  input:hover{
+	  background-color:#236756;
+	  }
+	  button{
+	 
+	  width:35%;
+	  background-color:#000;
+	  color:red;
+	  font-weight:50%;
+	  border:2px solid white;
+	  border-radius:5px;
+	  box-shadow:4px 4px 4px #fff;
+	  font-size:100%;
+	  height:30px;
+	  }
+	   button:hover{
+	   background-color:blue;
+	   color:white;
+	   border:2px solid black;
+	   border-radius:5px;
+	   }
+	  .result{
+	  font-size:20px;
+	  color:white;
+	  font-weight:50;
+	  margin:auto;
+	  height:175px;
+	  margin-top:0px;
+	  width:440px; 
+	  background-color: #060c21;
+	  border:3px solid black;
+	  border-radius:5px;
+	  
+	  }
+</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=devic-width,initial-scale="1.0">
+</head>
+<body>
+    <div class="card">
+      <h1 style="text-align:center; padding:6px;color:yellow; box-shadow:0px 05px 10px #ccc;">Student Percentage Calculator</h1><br>
+	  <hr><br>
+	  <input type="num" id="math" placeholder="Enter 1st subject Marks"><br><br>
+	  <input type="num" id="physics" placeholder="Enter 2st subject Marks"><br><br>
+	  <input type="num" id="chemistry" placeholder="Enter 3rd subject Marks"><br><br>
+	   <input type="num" id="Urdu" placeholder="Enter 4th subject Marks"><br><br>
+	  <input type="num" id="English" placeholder="Enter 5th subject Marks"><br><br>
+	  <input type="num" id="pakstudy" placeholder="Enter 6th subject Marks"><br><br>
+	 
+	  <button onclick="publishResult()">View Result</button>
+
+    </div>
+	
+	<div class="result">
+	   <h3 style="text-align:center; color:yellow;">Result=
+	      </h3>
+	  <span id="sum"></span><br>
+	  <span id="percentage"></span><br>
+	  <span id="grade"></span><br>
+	
+	</div>
+</body>
+
+  <script>
+  
+     function publishResult(){
+	 
+	 const math=document.
+	 getElementById("math").value;
+	 
+	 const physics=document.
+	 getElementById("physics").value;
+	 
+	 const chemistry=document.
+	 getElementById("chemistry").value;
+	 
+	  const Urdu=document.
+     getElementById("Urdu").value;
+	 
+	 const English=document.
+	 getElementById("English").value;
+	 
+	  const pakstudy=document.
+	 getElementById("pakstudy").value;
+	 
+	
+	 
+	 let total=parseFloat(math)+parseFloat(physics)+parseFloat(chemistry)+parseFloat(English)+parseFloat(pakstudy)+parseFloat(Urdu);
+	 
+	 document.getElementById("sum").innerHTML="The total Marks is="+total;
+	 
+	  percentage=(total*100)/600;
+	    percentage;
+	 	 document.getElementById("percentage").innerHTML="The Percentage is="+percentage;
+	 
+	 if(percentage>=90){
+	 
+	 document.getElementById("grade").innerHTML="You are Passed In A1 Grade";
+	 }
+	 else if(percentage>=80){
+	 	 document.getElementById("grade").innerHTML="You are Passed In A Grade";
+	 }
+	 	 else if(percentage>=70){
+	 	 document.getElementById("grade").innerHTML="You are Passed In B+ Grade";
+	 }
+	 	 else if(percentage>=60){
+	 	 document.getElementById("grade").innerHTML="You are Passed In B Grade";
+	 }
+	 	 else if(percentage>=50){
+	 	 document.getElementById("grade").innerHTML="You are Passed In C+ Grade";
+	 }
+	 	 else if(percentage>=40){
+	 	 document.getElementById("grade").innerHTML="You are Passed In C Grade";
+	 }
+	 	 else if(percentage>=30){
+	 	 document.getElementById("grade").innerHTML="You are Passed In D+ Grade";
+	 }
+	 	 else{
+	 	 document.getElementById("grade").innerHTML="You are Failed";
+	 }
+	 }
+  </script>
+</html>
